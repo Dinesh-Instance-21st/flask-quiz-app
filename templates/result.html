@@ -1,0 +1,91 @@
+<!-- <h1>Your Result</h1>
+
+<p><strong>Score:</strong> {{ score }} / {{ total }}</p>
+
+{% set percent = (score / total) * 100 %}
+
+{% if percent >= 90 %}
+    <h2 style="color: green;">Excellent 🎉</h2>
+{% elif percent >= 60 %}
+    <h2 style="color: orange;">Good 👍</h2>
+{% else %}
+    <h2 style="color: red;">Try Again ❌</h2>
+{% endif %}
+
+<hr>
+
+<h1>Quiz Attempt History</h1>
+
+<table border="1">
+<tr>
+    <th>Attempt</th>
+    <th>Score</th>
+    <th>Total</th>
+    <th>Date & Time</th>
+</tr>
+
+{% if results %}
+    {% for row in results %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+{% else %}
+<tr>
+    <td colspan="4">No attempts yet</td>
+</tr>
+{% endif %}
+</table>
+
+<br>
+<a href="/quiz">Go Back to Quiz</a> -->
+
+
+
+<h1>Your Result</h1>
+
+<p><strong>Score:</strong> {{ score }} / {{ total }}</p>
+
+{% set percent = (score / total) * 100 %}
+
+{% if percent >= 90 %}
+    <h2 style="color: green;">Excellent 🎉</h2>
+{% elif percent >= 60 %}
+    <h2 style="color: orange;">Good 👍</h2>
+{% else %}
+    <h2 style="color: red;">Try Again ❌</h2>
+{% endif %}
+
+<hr>
+
+<h1>Quiz Attempt History</h1>
+
+<table border="1">
+<tr>
+    <th>Attempt</th>
+    <th>Score</th>
+    <th>Total</th>
+    <th>Date & Time</th>
+</tr>
+
+{% if results %}
+    {% for row in results %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+{% else %}
+<tr>
+    <td colspan="4">No attempts yet</td>
+</tr>
+{% endif %}
+</table>
+
+<br>
+<a href="/quiz">Go Back to Quiz</a>

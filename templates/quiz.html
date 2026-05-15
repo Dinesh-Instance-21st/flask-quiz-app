@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+</head>
+<body>
+
+<h1>Flask & Django Quiz</h1>
+
+<h2>Attempt #{{ attempt }}</h2>
+
+<form method="POST" action="/submit">
+
+    {% for q in questions %}
+        <p>{{ loop.index }}. {{ q.question }}</p>
+
+        {% set q_index = loop.index %}
+
+        {% for option in q.options %}
+            <input type="radio" name="q{{ q_index }}" value="{{ option }}">
+            {{ option }}<br>
+        {% endfor %}
+
+        <br>
+    {% endfor %}
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
